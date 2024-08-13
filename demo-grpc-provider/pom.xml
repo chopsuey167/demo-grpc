@@ -13,7 +13,7 @@
 	<name>demo-grpc-provider</name>
 	<description>demo-grpc-provider</description>
 	<properties>
-		<grpc-spring-boot-starter.version>2.15.0.RELEASE</grpc-spring-boot-starter.version>
+		<grpc-spring-boot-starter.version>3.0.0.RELEASE</grpc-spring-boot-starter.version>
 	</properties>
 	<dependencies>
 		<dependency>

@@ -14,7 +14,7 @@ public class HelloWorldController extends HelloWorldServiceGrpc.HelloWorldServic
 
   private static final Logger log = LoggerFactory.getLogger(HelloWorldController.class);
 
-  private HelloWorldResponse sayHello2(HelloWorldRequest request) {
+  private HelloWorldResponse sayHello(HelloWorldRequest request) {
     log.info("Received request: {}", request);
     return HelloWorldResponse
         .newBuilder()
@@ -30,12 +30,12 @@ public class HelloWorldController extends HelloWorldServiceGrpc.HelloWorldServic
   }
 
   @Override
-  public StreamObserver<HelloWorldRequest> sayHello2(
+  public StreamObserver<HelloWorldRequest> sayHello(
       StreamObserver<HelloWorldResponse> responseObserver
   ) {
     return StreamObserverUtility.proxyStream(
         responseObserver,
-        this::sayHello2
+        this::sayHello
     );
   }
 }

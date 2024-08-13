@@ -42,7 +42,7 @@ public class HelloWorldClient {
     // connect to the server
     final StreamObserver<HelloWorldRequest> request = stub.sayHello(responseObserver);
     // send multiple requests (streaming)
-    Stream.of("Tom", "Julia", "Baeldung", "", "Ralf")
+    Stream.of("Tom", "Julia", "Ricardo", "", "Ralf")
         .map(HelloWorldRequest.newBuilder()::setName)
         .map(HelloWorldRequest.Builder::build)
         .forEach(request::onNext);
