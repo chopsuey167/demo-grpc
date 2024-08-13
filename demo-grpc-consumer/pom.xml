@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.rga</groupId>
+		<artifactId>demo-grpc</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<artifactId>demo-grpc-consumer</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>demo-grpc-consumer</name>
+	<description>demo-grpc-consumer</description>
+	<properties>
+		<grpc-spring-boot-starter.version>2.15.0.RELEASE</grpc-spring-boot-starter.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>net.devh</groupId>
+			<artifactId>grpc-client-spring-boot-starter</artifactId>
+			<version>${grpc-spring-boot-starter.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.rga</groupId>
+			<artifactId>demo-grpc-java</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+</project>
